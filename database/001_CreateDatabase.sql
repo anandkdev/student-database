@@ -1,0 +1,11 @@
+IF DB_ID('StudentDB') IS NOT NULL
+BEGIN
+    DROP DATABASE StudentDB;
+END
+GO
+
+CREATE DATABASE StudentDB;
+GO
+
+USE StudentDB;
+GO
