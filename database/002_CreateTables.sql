@@ -10,6 +10,7 @@ Phone varchar(15),
 DateOfBirth date not null,
 Gender char(1) check(Gender in ('M', 'F', 'O')),
 AdmissionDate date default GetDate(), -- Getdate will use todays date automatically
-IsActive bit default 1
+IsActive bit default 1,
+BloodGroup VARCHAR(5)
 );
 GO
