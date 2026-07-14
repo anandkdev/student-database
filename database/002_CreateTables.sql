@@ -57,3 +57,25 @@ CREATE TABLE Courses
         REFERENCES Teachers(TeacherID)
 );
 GO
+
+CREATE TABLE Enrollments
+(
+    EnrollmentID INT IDENTITY(1,1) PRIMARY KEY,
+
+    StudentID INT NOT NULL,
+
+    CourseID INT NOT NULL,
+
+    EnrollmentDate DATE DEFAULT GETDATE(),
+
+    Grade CHAR(2),
+
+    CONSTRAINT FK_Enrollments_Students
+        FOREIGN KEY (StudentID)
+        REFERENCES Students(StudentID),
+
+    CONSTRAINT FK_Enrollments_Courses
+        FOREIGN KEY (CourseID)
+        REFERENCES Courses(CourseID)
+);
+GO
