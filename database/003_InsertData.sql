@@ -1,3 +1,5 @@
+use StudentDB
+GO
 INSERT INTO Students
 (
     FirstName,
@@ -6,12 +8,72 @@ INSERT INTO Students
     Phone,
     DateOfBirth,
     Gender,
+    AdmissionDate,
+    IsActive,
     BloodGroup
 )
 VALUES
-('Priya',  'Sharma', 'priya.sharma@example.com', '9876500001', '2001-08-10', 'F', 'A+'),
-('Rahul',  'Verma',  'rahul.verma@example.com',  '9876500002', '1999-12-20', 'M', 'B+'),
-('Sneha',  'Patel',  'sneha.patel@example.com',  '9876500003', '2002-03-14', 'F', 'AB+'),
-('Arjun',  'Singh',  'arjun.singh@example.com',  '9876500004', '2000-11-05', 'M', 'O-'),
-('Meera',  'Reddy',  'meera.reddy@example.com',  '9876500005', '2001-06-22', 'F', 'B-');
-GO
+('Anand','Kumar','anand.kumar@example.com','9876543210','2000-05-15','M','2024-06-01',1,'O+'),
+('Priya','Sharma','priya.sharma@example.com','9876543211','2001-08-10','F','2024-06-01',1,'A+'),
+('Rahul','Verma','rahul.verma@example.com','9876543212','1999-12-20','M','2024-06-02',1,'B+'),
+('Sneha','Patel','sneha.patel@example.com','9876543213','2002-03-14','F','2024-06-02',1,'AB+'),
+('Arjun','Singh','arjun.singh@example.com','9876543214','2000-11-05','M','2024-06-03',1,'O-'),
+('Meera','Reddy','meera.reddy@example.com','9876543215','2001-06-22','F','2024-06-03',1,'B-'),
+('Karthik','Raj','karthik.raj@example.com','9876543216','2002-01-18','M','2024-06-04',1,'A-'),
+('Divya','Nair','divya.nair@example.com','9876543217','2000-09-11','F','2024-06-04',1,'O+'),
+('Vikram','Iyer','vikram.iyer@example.com','9876543218','2001-02-28','M','2024-06-05',1,'AB-'),
+('Aishwarya','Menon','aishwarya.menon@example.com','9876543219','2002-07-30','F','2024-06-05',1,'A+'),
+('Harish','Kannan','harish.kannan@example.com','9876543220','2000-10-12','M','2024-06-06',1,'B+'),
+('Nisha','George','nisha.george@example.com','9876543221','2001-11-18','F','2024-06-06',1,'O+'),
+('Surya','Prakash','surya.prakash@example.com','9876543222','1999-04-25','M','2024-06-07',1,'A-'),
+('Keerthi','Suresh','keerthi.suresh@example.com','9876543223','2002-12-08','F','2024-06-07',1,'AB+'),
+('Rohit','Shah','rohit.shah@example.com','9876543224','2000-01-20','M','2024-06-08',1,'O-'),
+('Pooja','Joshi','pooja.joshi@example.com','9876543225','2001-05-14','F','2024-06-08',1,'B-'),
+('Manoj','Das','manoj.das@example.com','9876543226','1999-08-17','M','2024-06-09',1,'A+'),
+('Lavanya','Rao','lavanya.rao@example.com','9876543227','2002-06-26','F','2024-06-09',1,'O+'),
+('Ajay','Mishra','ajay.mishra@example.com','9876543228','2000-03-09','M','2024-06-10',1,'AB-'),
+('Neha','Kapoor','neha.kapoor@example.com','9876543229','2001-09-21','F','2024-06-10',1,'B+');
+go
+INSERT INTO Teachers
+(
+    FirstName,
+    LastName,
+    Email,
+    Phone,
+    HireDate
+)
+VALUES
+('John','Smith','john.smith@school.com','9000000001','2018-06-10'),
+('Priya','Sharma','priya.teacher@school.com','9000000002','2019-01-15'),
+('David','Wilson','david.wilson@school.com','9000000003','2017-09-20'),
+('Meena','Rao','meena.rao@school.com','9000000004','2020-02-12'),
+('Arun','Kumar','arun.kumar@school.com','9000000005','2021-07-01');
+go
+INSERT INTO Courses
+(
+    CourseName,
+    Credits,
+    TeacherID
+)
+VALUES
+('Mathematics',4,10),
+('Physics',4,11),
+('Chemistry',3,12),
+('English',2,13),
+('Computer Science',5,14);
+go
+INSERT INTO Enrollments
+(
+    StudentID,
+    CourseID,
+    EnrollmentDate,
+    Grade
+)
+VALUES
+(12,38,'2024-06-15','A'),
+(13,39,'2024-06-15','B'),
+(14,40,'2024-06-16','A'),
+(15,41,'2024-06-16','B'),
+(16,42,'2024-06-17','A'),
+(17,43,'2024-06-17','A');
+go
